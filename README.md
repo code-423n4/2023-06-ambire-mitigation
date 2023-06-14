@@ -1,9 +1,9 @@
 # Sponsorname - Mitigation Review details
-- Total Prize Pool: XXX XXX 
+- Total Prize Pool: $6,500 USDC 
 - [Warden guidelines for C4 mitigation reviews](https://code4rena.notion.site/Guidelines-for-C4-mitigation-reviews-ed10fc5cfbf640bd8dcec66f38b343c4)
-- Submit findings [using the C4 form](https://code4rena.com/contests/YYYY-MM-sponsorName-mitigation-review/submit)
-- Starts TBD XXX XXX XX 20:00 UTC (ex. `Starts March 22, 2023 20:00 UTC`)
-- Ends TBD XXX XXX XX 20:00 UTC (ex. `Ends March 30, 2023 20:00 UTC`)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-06-ambire-wallet-mitigation-mitigation-review/submit)
+- Starts June 16,2023 20:00 UTC 
+- Ends June 21, 2023 20:00 UTC 
 
 ## Important note 
 
@@ -13,7 +13,11 @@ Each warden must submit a mitigation review for *every High and Medium finding* 
 
 Mitigations of all High and Medium issues will be considered in-scope and listed here.
 
-- [H-01: Title](link to Github issue)
+- [M-01: Fallback handlers can trick users into calling functions of the AmbireAccount contract](https://github.com/code-423n4/2023-05-ambire-findings/issues/21)
+- [M-02: Attacker can force the failure of transactions that use tryCatch](https://github.com/code-423n4/2023-05-ambire-findings/issues/18)
+- [M-03: Recovery transaction can be replayed after a cancellation](https://github.com/code-423n4/2023-05-ambire-findings/issues/16)
+- [M-04: Project may fail to be deployed to chains not compatible with Shanghai hardfork](https://github.com/code-423n4/2023-05-ambire-findings/issues/12)
+- [M-05: AmbireAccount implementation can be destroyed by privileges](https://github.com/code-423n4/2023-05-ambire-findings/issues/10)
 
 [ ⭐️ SPONSORS ADD INFO HERE ]
 
