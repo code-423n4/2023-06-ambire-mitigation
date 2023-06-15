@@ -19,11 +19,9 @@ Mitigations of all High and Medium issues will be considered in-scope and listed
 - [M-04: Project may fail to be deployed to chains not compatible with Shanghai hardfork](https://github.com/code-423n4/2023-05-ambire-findings/issues/12)
 - [M-05: AmbireAccount implementation can be destroyed by privileges](https://github.com/code-423n4/2023-05-ambire-findings/issues/10)
 
-[ ⭐️ SPONSORS ADD INFO HERE ]
-
 ## Overview of changes
 
-Please provide context about the mitigations that were applied if applicable and identify any areas of specific concern.
+We fixed 3 of the vulmnerabilities immediately after they were found, and we chose not to mitigate another 2
 
 ## Mitigations to be reviewed
 
@@ -33,8 +31,22 @@ Wherever possible, mitigations should be provided in separate pull requests, one
 
 | URL | Mitigation of | Purpose | 
 | ----------- | ------------- | ----------- |
-| https://github.com/code4rena/sample-contracts/pull/XXX | H-01 | This mitigation does XYZ | 
+| [3a0a4d9b24c96d816fb5819efe1e5f4dc57d7835](https://github.com/AmbireTech/ambire-common/commit/3a0a4d9b24c96d816fb5819efe1e5f4dc57d7835) | M-05 | To mitigate this and avoid confusion, we removed the constructor as it's not used anyway | 
+| [1c0b06fbbbdd9aac1285d4fc4949f5b84f923238](https://github.com/AmbireTech/ambire-common/commit/1c0b06fbbbdd9aac1285d4fc4949f5b84f923238) | M-03 | Increment the nonce to prevent replaying recovery transactions | 
+| [cf9c8b115a60df384ae8986a368bb65c56cd7e12](https://github.com/AmbireTech/ambire-common/commit/cf9c8b115a60df384ae8986a368bb65c56cd7e12) | M-04 | Downgrade Solidity to allow deploying on pre-Shanghai networks | 
+
 
 ## Out of Scope
 
-Please list any High and Medium issues that were judged as valid but you have chosen not to fix.
+### M-01: Fallback handlers can trick users into calling functions of the AmbireAccount contract
+This is worth pointing out but the likelihood of an attack is very low, it needs the user to consciously add a malicious fallback handler and the UI needs to be updated to attack the user as well. If we go into the possibility of malicious UI updates, then we open a whole new can of worms which is completely out of scope - in other words, we will have much bigger issues in this case, so this is completely irrelevant.
+
+Furthermore there's no applicable mitigation
+
+### M-02: Attacker can force the failure of transactions that use tryCatch
+For now, we have chosen not to fix this. It's a possible attack that a relayer/ERC-4337 bundler can apply against a specific type of user transactions.
+
+Unfortunately, we have not found a satisfying mitigation yet, but the chances of this happening in the wild are next to none because relayers/bundlers are chosen by the user and have nothing to gain from griefing like this, other than a single one-time fee (normally quite small). If a relayer/bundler griefs like this, the user can opt out of using them.
+
+
+https://github.com/code-423n4/2023-05-ambire-findings/issues/18
