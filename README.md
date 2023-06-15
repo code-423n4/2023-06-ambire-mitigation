@@ -1,7 +1,7 @@
-# Sponsorname - Mitigation Review details
+# Ambire Wallet - Mitigation Review details
 - Total Prize Pool: $6,500 USDC 
 - [Warden guidelines for C4 mitigation reviews](https://code4rena.notion.site/Guidelines-for-C4-mitigation-reviews-ed10fc5cfbf640bd8dcec66f38b343c4)
-- Submit findings [using the C4 form](https://code4rena.com/contests/2023-06-ambire-wallet-mitigation-mitigation-review/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-06-ambire-wallet-mitigation-review/submit)
 - Starts June 16,2023 20:00 UTC 
 - Ends June 21, 2023 20:00 UTC 
 
