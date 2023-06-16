@@ -13,7 +13,6 @@ Each warden must submit a mitigation review for *every High and Medium finding* 
 
 Mitigations of all High and Medium issues will be considered in-scope and listed here.
 
-- [M-01: Fallback handlers can trick users into calling functions of the AmbireAccount contract](https://github.com/code-423n4/2023-05-ambire-findings/issues/21)
 - [M-02: Attacker can force the failure of transactions that use tryCatch](https://github.com/code-423n4/2023-05-ambire-findings/issues/18)
 - [M-03: Recovery transaction can be replayed after a cancellation](https://github.com/code-423n4/2023-05-ambire-findings/issues/16)
 - [M-04: Project may fail to be deployed to chains not compatible with Shanghai hardfork](https://github.com/code-423n4/2023-05-ambire-findings/issues/12)
