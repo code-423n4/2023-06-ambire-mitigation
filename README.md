@@ -21,13 +21,11 @@ Mitigations of all High and Medium issues will be considered in-scope and listed
 
 ## Overview of changes
 
-We fixed 3 of the vulmnerabilities after they were found, and we chose not to mitigate one.
+We fixed 4 of the vulnerabilities after they were found, and we chose not to mitigate one.
 
 ## Mitigations to be reviewed
 
-[ ⭐️ SPONSORS: PLEASE ADD A LINK TO THE BRANCH IN YOUR REPO CONTAINING ALL PRS ]
-
-Wherever possible, mitigations should be provided in separate pull requests, one per issue. If that is not possible (e.g. because several audit findings stem from the same core problem), then please link the PR to all relevant issues in your findings repo. 
+The mitigations are already committed in [this branch](https://github.com/AmbireTech/ambire-common/tree/v2) and they are in individual commits.
 
 | URL | Mitigation of | Purpose | 
 | ----------- | ------------- | ----------- |
@@ -39,7 +37,7 @@ Wherever possible, mitigations should be provided in separate pull requests, one
 
 ## Out of Scope
 
-### M-01: Fallback handlers can trick users into calling functions of the AmbireAccount contract
-This is worth pointing out but the likelihood of an attack is very low, it needs the user to consciously add a malicious fallback handler and the UI needs to be updated to attack the user as well. If we go into the possibility of malicious UI updates, then we open a whole new can of worms which is completely out of scope - in other words, we will have much bigger issues in this case, so this is completely irrelevant.
+## M-01: Fallback handlers can trick users into calling functions of the AmbireAccount contract
+This is worth pointing out, but the likelihood of an attack is very low, it needs the user to consciously add a malicious fallback handler, and the UI needs to be updated to attack the user as well. If we go into the possibility of malicious UI updates, then we open a whole new can of worms which is completely out of scope - in other words, we will have much bigger issues in this case, so this is completely irrelevant.
 
-Furthermore there's no applicable mitigation
+Furthermore, there's no applicable mitigation.
